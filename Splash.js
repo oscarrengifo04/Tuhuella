@@ -1,25 +1,16 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { Text, View, StyleSheet, StatusBar } from 'react-native';
 
-import Splash from './Splash';
-
-type Props = {};
-export default class App extends Component<Props> {
+export default class Splash extends Component {
   render() {
     return (
-        <Splash></Splash>
-      
+      <View style={styles.container}>
+      <StatusBar
+     backgroundColor="#00675b"
+     barStyle="light-content"
+     />
+      <Text>Hello world!</Text>
+      </View>
     );
   }
 }
@@ -29,7 +20,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#009688',
   },
   welcome: {
     fontSize: 20,
