@@ -9,27 +9,42 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  StatusBar
 } from 'react-native';
 
 import Splash from './Splash';
+import TiempoSplash from './tiemposplash';
+import Inicio from './inicio';
+
 
 type Props = {};
 export default class App extends Component<Props> {
+
+state = {
+  loaded: false
+}
+constructor(){
+  super();
+  TiempoSplash.load(v => this.setState({loaded: true}));
+}
   render() {
     return (
-        <Splash></Splash>
-      
+        <View style={styles.container}>
+        <StatusBar backgroundColor="#97b498" barStyle="light-content"/>
+        {this.state.loaded ? <Inicio></Inicio> : <Splash></Splash>}
+        </View>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#c8e6c9',
   },
   welcome: {
     fontSize: 20,
