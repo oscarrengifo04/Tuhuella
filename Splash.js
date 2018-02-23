@@ -6,7 +6,7 @@ export default class Splash extends Component {
     return (
       <View>
       <StatusBar backgroundColor="#97b498" barStyle="light-content"/>
-      <Image style={styles.logo} source={require('./img/logo.png')} />
+      <View><Image style={styles.logo} source={require('./img/logo.png')} /></View>
       </View>
     );
   }
@@ -17,11 +17,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#c8e6c9',
   },
   logo:{
     width: 280,
     height: 280,
+
   },
   welcome: {
     fontSize: 20,

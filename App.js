@@ -30,7 +30,7 @@ constructor(){
 }
   render() {
     return (
-        <View style={styles.container}>
+        <View  style={styles.container}>
         <StatusBar backgroundColor="#97b498" barStyle="light-content"/>
         {this.state.loaded ? <Inicio></Inicio> : <Splash></Splash>}
         </View>
@@ -44,6 +44,5 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#c8e6c9',
   },
 });
