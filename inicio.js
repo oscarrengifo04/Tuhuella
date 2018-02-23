@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, StatusBar, Image, FlatList, WebView } from 'react-native';
+import { Text, View, StyleSheet, StatusBar, Image,FlatList } from 'react-native';
 import flatlistdata from './flatlistdata';
 
 class FlatListItem extends Component{
@@ -9,9 +9,9 @@ class FlatListItem extends Component{
       <Image source ={{uri: this.props.item.imageUrl}} style={styles.imagenes}></Image>
       <Text style={styles.noticias}>
       <Text style={styles.noticiasTitulo}>{this.props.item.name} {'\n'}</Text>
-      <Text >{this.props.item.description}</Text>
-
+      <Text >{this.props.item.description}{'\n'}{'\n'}</Text>
       </Text>
+      <Text style={styles.boton}> {this.props.item.boton} </Text>
       </View>
     );
   }
@@ -52,8 +52,8 @@ const styles = StyleSheet.create({
     padding:8,
     paddingLeft:30,
     backgroundColor: 'white',
-    height: 100,
-    marginLeft: 80,
+    height: 130,
+    marginLeft: 90,
     marginRight: 5,
     marginBottom: 4,
     borderRadius: 15,
@@ -64,10 +64,22 @@ const styles = StyleSheet.create({
     textAlign: 'auto',
   },
   imagenes: {
-    width: 90,
-    height: 100,
+    width: 100,
+    height: 130,
     marginLeft: 5,
     position: 'absolute',
     zIndex: 1,
+  },
+  boton: {
+    width: 190,
+    textAlign: 'center',
+    marginTop: 98,
+    marginLeft: 140,
+    padding: 4,
+    backgroundColor: '#DEE6E6',
+    fontWeight: 'bold',
+    position: 'absolute',
+    borderRadius: 10,
+    zIndex: 2,
   }
 });
