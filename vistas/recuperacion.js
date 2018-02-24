@@ -7,7 +7,7 @@ import {
   StatusBar
 } from 'react-native';
 
-import { Router, Scene, Stack } from 'react-native-router-flux';
+import { Router, Scene } from 'react-native-router-flux';
 
 import Splash from './vistas/Splash';
 import TiempoSplash from './vistas/tiemposplash';
@@ -27,14 +27,14 @@ constructor(){
 
 render() {
     return (
-        <Router >
-          <Stack key="root" hideNavBar={true} navigationBarStyle={styles.navBar} titleStyle={styles.navBarTitle}>
-            <Scene key="splash" component={Splash} title="Splash" initial={true} />
-            <Scene key="inicio" component={Inicio} title="TuHuella" hideNavBar={false} />
-            <Scene key="noticia" component={Noticia} title="Noticias" hideNavBar={false} />
-          </Stack>
+        <Router hideNavBar= "true">
+          <Scene key="root">
+            <Scene key="pageOne" component={inicio} title="PageOne" initial={true} />
+            <Scene key="pageTwo" component={noticia} title="PageTwo" />
+          </Scene>
         </Router>
-
+        <StatusBar backgroundColor="#97b498" barStyle="light-content"/>
+        {this.state.loaded ? <Inicio></Inicio> : <Splash></Splash>}
     );
   }
 }
@@ -46,12 +46,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  navBar:{
-    backgroundColor:'#a5d6a7',
-  },
-  navBarTitle: {
-    color: 'black',
-    paddingLeft: 60,
-
-  }
 });
