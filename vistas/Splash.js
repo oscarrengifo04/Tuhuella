@@ -1,8 +1,19 @@
-//DOCUMENTAR
+/*
+Splash de la App
+@autor: Oscar Rengifo
+*/
 import React, { Component } from 'react';
-import { Text, Button, View, StyleSheet, StatusBar, Image, TouchableOpacity } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  StatusBar,
+  Image,
+  TouchableOpacity
+} from 'react-native';
+//importamos Actions para usar las acciones de Router-flux
 import { Actions } from 'react-native-router-flux';
-
+//pintamos la vista
 export default class Splash extends Component {
   render() {
     return (
@@ -17,7 +28,7 @@ export default class Splash extends Component {
     );
   }
 }
-
+//creamos los estilos para el splash (imagen y boton)
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -1,9 +1,24 @@
-//DOCUMENTAR
+/*
+En este componente desplegamos las noticias provenientes del arreglo
+de datos "flatlisdata"
+@autor: Oscar Rengifo
+*/
 import React, { Component } from 'react';
-import { Text,Button,View, StyleSheet, StatusBar, Image,FlatList, ScrollView, TouchableOpacity } from 'react-native';
+import {
+  Text,
+  View,
+  StyleSheet,
+  StatusBar,
+  Image,
+  FlatList,
+  ScrollView,
+  TouchableOpacity
+} from 'react-native';
+//importamos el arreglo de datos de las noticias
 import flatlistdata from './flatlistdata';
+// importamos los Actions para hacer los movimientos entre paginas
 import { Actions } from 'react-native-router-flux';
-
+// En esta clase renderizamos cada una de las noticias
 class FlatListItem extends Component{
   render(){
     const News = this.props.item;
@@ -22,16 +37,13 @@ class FlatListItem extends Component{
   }
 }
 
-
+// en esta clase hacemos uso del FlatList para desplegar las noticias
 export default class Inicio extends Component {
 
   render() {
     return (
       <View >
       <StatusBar backgroundColor="#75a478" barStyle="light-content"/>
-      {/*}<View style={styles.fakeToolbar}></View>
-      <Image style={styles.logonombre} source={require('../img/nombre.png')} />
-      */}
       <ScrollView>
       <Text style={styles.tituloinicio}>Noticias destacadas</Text>
       <FlatList data={flatlistdata} renderItem={({item,index})=>{
@@ -46,24 +58,11 @@ export default class Inicio extends Component {
     );
   }
 }
-
+//creamos los estilos para las noticias (botones, imagenes, contenedores, etc)
 const styles = StyleSheet.create({
   container: {
     flex:1,
     backgroundColor: '#e0e0e0',
-  },
-  fakeToolbar:{
-    backgroundColor: '#a5d6a7',
-    height: 58,
-  },
-  logonombre: {
-    marginTop: 12,
-    marginLeft: '25%',
-    position: 'absolute',
-    width: 150,
-    height: 30,
-    alignItems: 'center',
-    zIndex: 1,
   },
   tituloinicio:{
     fontSize: 18,

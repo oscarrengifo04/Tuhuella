@@ -1,5 +1,10 @@
+/*
+En este arreglo de datos almacenamos los datos de las noticias
+para ser desplegados en las otras vistas
+@autor: Oscar Rengifo
+*/
 var flatlistdata = [
-
+  //formato item.index
   {
     "key":"10",
     "name":"Cultivos con rocas trituradas podrían reducir niveles de CO2",
