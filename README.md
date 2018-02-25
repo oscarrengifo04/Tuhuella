@@ -1,8 +1,8 @@
-#Prueba Almundo, Aplicación TuHuella
+# Prueba Almundo, Aplicación TuHuella
 
 Aplicación de noticias ambientales para aplicar a una vacante en la empresa Almundo
 
-##Introducción
+## Introducción
 
 Esta aplicacion de noticias está desarrollada en React-native, y hace uso de la API:
 
@@ -16,7 +16,7 @@ Esta aplicación fue probada exitosamente en:
 * Android 6.0
 * macOS 10.13.3
 
-##Instalación
+## Instalación
 
 Instalamos Node and Watchman usando Homebrew
 ```
@@ -51,7 +51,7 @@ cd Tuhuella
 react-native run-android
 ```
 
-##Componentes exigidos
+## Componentes exigidos
 
 La aplicación cumple con el uso de los componentes obligatorios y hace uso de algunos extra:
 
@@ -64,6 +64,6 @@ La aplicación cumple con el uso de los componentes obligatorios y hace uso de a
 * TouchableOpacity / TouchableHighlight
 
 
-##Autor
+## Autor
 
 **Oscar Rengifo Muñoz**
